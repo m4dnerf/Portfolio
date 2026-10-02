@@ -1,0 +1,278 @@
+/* ================================
+   Iceberg Dark Theme
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #161821;
+    color: #c6c8d1;
+
+    line-height: 1.6;
+}
+
+/* ================================
+   Header / Profile
+================================ */
+
+body > div:first-child {
+    text-align: center;
+
+    padding: 70px 20px 35px;
+
+    background: linear-gradient(
+        135deg,
+        #161821,
+        #1e2132
+    );
+
+    color: #c6c8d1;
+
+    border-bottom: 1px solid #2a2e3f;
+}
+
+body > div:first-child h1 {
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 700;
+
+    color: #c6c8d1;
+}
+
+body > div:first-child h2 {
+    margin-top: 8px;
+
+    color: #767994;
+
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+
+    font-weight: 400;
+}
+
+/* ================================
+   Profile Image
+================================ */
+
+#img_id {
+    display: block;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    margin: -20px auto 40px;
+
+    border-radius: 50%;
+
+    border: 6px solid #161821;
+
+    box-shadow:
+        0 0 0 2px #84a0c6,
+        0 10px 30px rgba(0, 0, 0, 0.45);
+
+    position: relative;
+}
+
+/* ================================
+   Horizontal Rules
+================================ */
+
+hr {
+    width: min(90%, 1000px);
+
+    margin: 50px auto;
+
+    border: none;
+
+    border-top: 1px solid #2a2e3f;
+}
+
+/* ================================
+   Articles
+================================ */
+
+article {
+    width: min(90%, 1000px);
+
+    margin: 0 auto;
+}
+
+article > h2 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+    color: #84a0c6;
+}
+
+/* ================================
+   Sections / Portfolio Cards
+================================ */
+
+article section {
+    background: #1e2132;
+
+    padding: 25px 30px;
+
+    margin: 18px 0;
+
+    border-radius: 14px;
+
+    border: 1px solid #2a2e3f;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+article section:hover {
+    transform: translateY(-5px);
+
+    border-color: #84a0c6;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35),
+        0 0 15px rgba(132, 160, 198, 0.08);
+}
+
+article section h3 {
+    margin: 0 0 8px;
+
+    font-size: 1.2rem;
+
+    color: #c6c8d1;
+}
+
+article section p {
+    margin: 0;
+
+    color: #767994;
+}
+
+/* ================================
+   Social Media
+================================ */
+
+.table_border {
+    width: min(90%, 700px);
+
+    margin: 50px auto 70px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background: #1e2132;
+
+    border: 1px solid #2a2e3f;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.table_border tr {
+    transition:
+        background-color 0.2s ease;
+}
+
+.table_border tr:hover {
+    background-color: #25293a;
+}
+
+.table_border th {
+    padding: 20px;
+
+    text-align: left;
+
+    font-weight: 500;
+
+    color: #c6c8d1;
+
+    border-bottom: 1px solid #2a2e3f;
+}
+
+.table_border tr:last-child th {
+    border-bottom: none;
+}
+
+.table_border a {
+    color: #84a0c6;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease;
+}
+
+.table_border a:hover {
+    color: #a7c0df;
+
+    text-decoration: underline;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 600px) {
+
+    body > div:first-child {
+        padding: 50px 15px 30px;
+    }
+
+    #img_id {
+        width: 140px;
+        height: 140px;
+
+        margin-top: -10px;
+    }
+
+    article {
+        width: 90%;
+    }
+
+    article > h2 {
+        font-size: 1.6rem;
+    }
+
+    article section {
+        padding: 20px;
+    }
+
+    .table_border {
+        width: 90%;
+
+        font-size: 0.9rem;
+    }
+
+    .table_border th {
+        padding: 16px;
+    }
+}
+
