@@ -26,24 +26,22 @@ body {
    Header / Profile
 ================================ */
 
-body > div:first-child {
+body>div:first-child {
     text-align: center;
     height: 300px;
     padding: 0px 20px 35px;
 
-    background: linear-gradient(
-        135deg,
-        #161821,
-        #1e2132
-    );
+    background: linear-gradient(135deg,
+            #161821,
+            #1e2132);
 
     color: #c6c8d1;
 
     border-bottom: 1px solid #2a2e3f;
 }
 
-body > div:first-child h1 {
-    margin : 0px;
+body>div:first-child h1 {
+    margin: 0px;
 
     font-size: clamp(2rem, 5vw, 7rem);
 
@@ -52,7 +50,7 @@ body > div:first-child h1 {
     color: #c6c8d1;
 }
 
-body > div:first-child h2 {
+body>div:first-child h2 {
     margin-top: 8px;
 
     color: #767994;
@@ -79,9 +77,9 @@ body > div:first-child h2 {
     border-radius: 50%;
 
     border: 6px solid #161821;
-
+    
     box-shadow:
-        0 0 0 2px #84a0c6,
+        0 0 0 2px #84a0c6 ,
         0 10px 30px rgba(0, 0, 0, 0.45);
 
     position: relative;
@@ -111,7 +109,7 @@ article {
     margin: 0 auto;
 }
 
-article > h2 {
+article>h2 {
     text-align: center;
 
     font-size: 2rem;
@@ -124,6 +122,48 @@ article > h2 {
 /* ================================
    Sections / Portfolio Cards
 ================================ */
+
+#Hobby section {
+    background: #1e2132;
+
+    padding: 25px 30px;
+
+    margin: 18px 0;
+
+    border-radius: 14px;
+
+    border: 1px solid #2a2e3f;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    /* Center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Hobby section h3 {
+    margin: 0 0 8px 0;
+}
+
+#Hobby section p {
+    margin: 0;
+}
+
+#Hobby section:hover {
+    transform: translateY(-5px);
+    border-color: #84a0c6;
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35),
+        0 0 15px rgba(132, 160, 198, 0.08);
+}
+
 
 article section {
     background: #1e2132;
@@ -152,12 +192,13 @@ article section:hover {
         0 12px 25px rgba(0, 0, 0, 0.35),
         0 0 15px rgba(132, 160, 198, 0.08);
 }
+
 article section h4:hover {
-   
+
     text-decoration: underline dashed;
     text-decoration-thickness: 5px;
     text-underline-offset: 7px;
-   
+
 }
 
 #Interest section {
@@ -279,7 +320,7 @@ article section p {
 
 @media (max-width: 600px) {
 
-    body > div:first-child {
+    body>div:first-child {
         padding: 50px 15px 30px;
     }
 
@@ -294,7 +335,7 @@ article section p {
         width: 90%;
     }
 
-    article > h2 {
+    article>h2 {
         font-size: 1.6rem;
     }
 
@@ -312,4 +353,3 @@ article section p {
         padding: 16px;
     }
 }
-
