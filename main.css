@@ -28,8 +28,8 @@ body {
 
 body > div:first-child {
     text-align: center;
-
-    padding: 70px 20px 35px;
+    height: 300px;
+    padding: 0px 20px 35px;
 
     background: linear-gradient(
         135deg,
@@ -43,7 +43,7 @@ body > div:first-child {
 }
 
 body > div:first-child h1 {
-    margin: 0;
+    margin : 0px;
 
     font-size: clamp(2rem, 5vw, 7rem);
 
@@ -74,7 +74,7 @@ body > div:first-child h2 {
 
     object-fit: cover;
 
-    margin: -20px auto 40px;
+    margin: -90px auto 45px;
 
     border-radius: 50%;
 
@@ -147,6 +147,44 @@ article section {
 
 article section:hover {
     transform: translateY(-5px);
+    border-color: #84a0c6;
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35),
+        0 0 15px rgba(132, 160, 198, 0.08);
+}
+article section h4:hover {
+   
+    text-decoration: underline dashed;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 7px;
+   
+}
+
+#Interest section {
+    background: #1e2132;
+
+    width: 100%;
+
+
+    padding: 12px 30px;
+
+    margin: 18px auto;
+
+    border-radius: 14px;
+
+    border: 1px solid #2a2e3f;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+#Interest section:hover {
+    transform: translateY(-5px);
 
     border-color: #84a0c6;
 
@@ -155,10 +193,12 @@ article section:hover {
         0 0 15px rgba(132, 160, 198, 0.08);
 }
 
-article section h3 {
-    margin: 0 0 8px;
+article section h4 {
 
-    font-size: 1.2rem;
+    margin: 0px;
+    text-align: center;
+
+    font-size: 2rem;
 
     color: #c6c8d1;
 }
@@ -199,9 +239,6 @@ article section p {
         background-color 0.2s ease;
 }
 
-.table_border tr:hover {
-    background-color: #25293a;
-}
 
 .table_border th {
     padding: 20px;
