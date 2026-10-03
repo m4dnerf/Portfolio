@@ -43,7 +43,7 @@ body {
     --background: #161821;
     --header: #1e2132;
     --card: #1e2132;
-
+    --table_border: #97c3ff;
     --text: #c6c8d1;
     --muted: #767994;
 
@@ -63,7 +63,7 @@ body.light-theme {
     --background: #dce6f2;
     --header: #b3cbe7;
     --card: #edf3fa;
-
+    --table_border: #4c6486;
     --text: #1e3555;
     --muted: #405a7a;
 
@@ -258,7 +258,7 @@ article section:hover {
     background: var(--card);
     color: var(--text);
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--table_border);
     border-radius: 14px;
 
     box-shadow: 0 8px 25px var(--shadow);
@@ -276,14 +276,14 @@ article section:hover {
 
 .Table_list th {
     padding: 18px 20px;
-    text-align: center;
+    text-align: left;
     
 
     color: var(--accent);
     font-size: 1rem;
     font-weight: 900;
 
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--table_border);
 }
 
 /* Normal cells */
@@ -292,7 +292,7 @@ article section:hover {
     vertical-align: middle;
 
     color: var(--text);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--table_border);
 
     transition:
         background-color 0.2s ease,
@@ -302,18 +302,29 @@ article section:hover {
 .Table_list th,
 .Table_list td {
     padding: 20px;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    vertical-align: middle;
+    border-right: 1px solid var(--table_border);
+    border-bottom: 1px solid var(--table_border);
+   
+    
 }
 
 .Table_list th:last-child,
 .Table_list td:last-child {
     border-right: none;
+    white-space: nowrap;
+   
+}
+
+.Table_list th:first-child,
+.Table_list td:first-child {
+   
+    white-space: nowrap;
+   
 }
 
 .Table_list tbody tr:last-child td {
     border-bottom: none;
+    
 }
 
 /* Row hover */
