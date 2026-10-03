@@ -9,7 +9,7 @@
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-  
+
 
     <title>Document</title>
 
@@ -18,24 +18,25 @@
 
 <body>
 
-    
+
     <!-- Heading -->
     <div class="header">
         <div class="theme-menu">
-        <button class="theme-button">Theme</button>
+            <button class="theme-button">Theme</button>
 
-        <div class="theme-options">
-            <button id ="dark">Dark</button>
-            <button id ="light">Light</button>
-        </div>
+            <div class="theme-options">
+                <button id="dark">Dark</button>
+                <button id="light">Light</button>
+            </div>
         </div>
         <h1>Portfolio</h1>
+        <hr id="inbetween_Port">
         <h2>Mr.Pun Panthawornwong</h2>
     </div>
- 
-        
- 
-        
+
+
+
+
 
     <!-- Image -->
     <img id="img_id" src="Image/Meme.jpg" alt="Hello kitty">
@@ -44,7 +45,7 @@
     <hr>
 
     <!-- Hobbies -->
-    <article id = "Hobby">
+    <article id="Hobby">
         <h2>My hobby</h2>
 
         <section>
@@ -71,26 +72,40 @@
     <hr>
 
     <!-- Skills -->
-    <article>
-        <h2>ทักษะความสามารถ</h2>
+    <article class = "skill">
+        <h2>My Skill</h2>
+        <table class="Table_list">
+            <thead>
+                <tr class="Head_table">
+                    <th>Skill</th>
+                    <th>Level</th>
+                    <th>Description</th>
+                    <th>My work</th>
+                </tr>
+            </thead>
 
-        <section>
-            <h4>▣ Modeling ▣</h4>
-        </section>
-
-        <section>
-            <h4>🧍 Animating 🧍</h4>
-        </section> 
-
-        <section>
-            <h4>🔊  Sound Design  🔊</h4>
-        </section>
+            <tbody>
+                <tr>
+                    <td>3D Modeling</td>
+                    <td>
+                        <span class="skill-level intermediate">Intermediate</span>
+                    </td>
+                    <td>
+                        I can do simple character designs such as UV wrapping and
+                        unwrapping, texturing, and adding specific details to models.
+                    </td>
+                    <td>
+                        <a href="#">View work</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </article>
 
     <hr>
 
     <!-- Interests -->
-    <article id = "Interest">
+    <article id="Interest">
         <h2>Interest</h2>
 
         <section>
@@ -138,7 +153,7 @@
             </th>
         </tr>
     </table>
- 
+
     <script src="main.js"></script>
 
 </body>

@@ -25,6 +25,13 @@ body {
         color 0.3s ease;
 }
 
+#inbetween_Port {
+    width: 800px;
+    margin: 0 auto 12px;
+    border: none;
+    border-top: 2px solid var(--border);
+}
+
 
 /* =================================
    Theme Variables
@@ -74,7 +81,7 @@ body.light-theme {
    Header / Profile
 ================================= */
 
-body > div:first-child {
+body>div:first-child {
     text-align: center;
 
     height: 300px;
@@ -92,7 +99,7 @@ body > div:first-child {
         border-color 0.3s ease;
 }
 
-body > div:first-child h1 {
+body>div:first-child h1 {
     margin: 0;
 
     font-size: clamp(2rem, 5vw, 7rem);
@@ -101,7 +108,7 @@ body > div:first-child h1 {
     color: var(--text);
 }
 
-body > div:first-child h2 {
+body>div:first-child h2 {
     margin-top: 8px;
 
     color: var(--muted);
@@ -167,7 +174,7 @@ article {
     margin: 0 auto;
 }
 
-article > h2 {
+article>h2 {
     text-align: center;
 
     font-size: 2rem;
@@ -207,7 +214,7 @@ article section:hover {
     transform: translateY(-5px);
 
     border-color: var(--accent);
-    
+
     box-shadow:
         0 12px 25px var(--shadow),
         0 0 15px rgba(132, 160, 198, 0.08);
@@ -241,27 +248,122 @@ article section:hover {
    Skills
 ================================= */
 
-article:not(#Hobby):not(#Interest) section {
-    display: flex;
+.Table_list {
+    width: min(96%, 1300px);
+    margin: 40px auto 70px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
 
-    align-items: center;
-    justify-content: center;
+    background: var(--card);
+    color: var(--text);
 
-    min-height: 55px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px var(--shadow);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-article:not(#Hobby):not(#Interest) section:hover{
-    text-decoration: underline dashed;
-
-    text-decoration-thickness: 5px;
-
-    text-underline-offset: 7px;
+/* Header */
+.Table_list .Head_table {
+    background: var(--button);
 }
 
-article:not(#Hobby):not(#Interest) section h4 {
-    margin: 0;
+.Table_list th {
+    padding: 18px 20px;
+    text-align: center;
+    
 
-    font-size: 1.2rem;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 900;
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* Normal cells */
+.Table_list td {
+    padding: 20px;
+    vertical-align: middle;
+
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.Table_list th,
+.Table_list td {
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.Table_list th:last-child,
+.Table_list td:last-child {
+    border-right: none;
+}
+
+.Table_list tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Row hover */
+.Table_list tbody tr {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.Table_list tbody tr:hover {
+    background: var(--button-hover);
+}
+
+/* Skill name */
+.Table_list td:first-child {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Level badge */
+.skill-level {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    border: 1px solid var(--accent);
+    color: var(--accent);
+
+    background: transparent;
+}
+
+/* Work link */
+.Table_list a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        text-decoration 0.2s ease;
+}
+
+.Table_list a:hover {
+    color: var(--text);
+    text-decoration: underline;
 }
 
 
@@ -509,7 +611,7 @@ p {
 
 @media (max-width: 600px) {
 
-    body > div:first-child {
+    body>div:first-child {
         padding: 50px 15px 30px;
     }
 
@@ -524,7 +626,7 @@ p {
         width: 90%;
     }
 
-    article > h2 {
+    article>h2 {
         font-size: 1.6rem;
     }
 
@@ -546,4 +648,21 @@ p {
         top: 12px;
         right: 12px;
     }
+
+    @media (max-width: 700px) {
+        .Table_list {
+            width: 95%;
+            font-size: 0.9rem;
+        }
+
+        .Table_list th,
+        .Table_list td {
+            padding: 14px 12px;
+        }
+
+        .Table_list th {
+            font-size: 0.85rem;
+        }
+    }
+
 }
