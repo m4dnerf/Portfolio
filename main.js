@@ -12,3 +12,15 @@ darkButton.addEventListener("click", () => {
 lightButton.addEventListener("click", () => {
     document.body.classList.add("light-theme");
 });
+
+const menuButton = document.getElementById("menu-button");
+const closeSidebar = document.getElementById("close-sidebar");
+const sidebar = document.getElementById("sidebar");
+
+menuButton.addEventListener("click", function () {
+    sidebar.classList.add("active");
+});
+
+closeSidebar.addEventListener("click", function () {
+    sidebar.classList.remove("active");
+});
