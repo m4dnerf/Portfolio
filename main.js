@@ -1,6 +1,5 @@
-console.log("main.js loaded");
 
-
+// [Theme Setup]
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
 
@@ -12,6 +11,10 @@ darkButton.addEventListener("click", () => {
 lightButton.addEventListener("click", () => {
     document.body.classList.add("light-theme");
 });
+
+
+// [Section Navigator]
+
 
 const menuButton = document.getElementById("menu-button");
 const closeSidebar = document.getElementById("close-sidebar");
