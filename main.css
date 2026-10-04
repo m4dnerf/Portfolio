@@ -189,8 +189,52 @@ article>h2 {
    Portfolio Cards
 ================================= */
 
-article section {
+/* article section {
     background: var(--card);
+
+    padding: 25px 30px;
+
+    margin: 18px 0;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 5px 18px var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.3s ease;
+} */
+
+/* article section:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 12px 25px var(--shadow),
+        0 0 15px rgba(132, 160, 198, 0.08);
+} */
+
+
+/* =================================
+   Hobby
+================================= */
+
+#Hobby section {
+    
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+     background: var(--card);
 
     padding: 25px 30px;
 
@@ -210,30 +254,6 @@ article section {
         background-color 0.3s ease;
 }
 
-article section:hover {
-    transform: translateY(-5px);
-
-    border-color: var(--accent);
-
-    box-shadow:
-        0 12px 25px var(--shadow),
-        0 0 15px rgba(132, 160, 198, 0.08);
-}
-
-
-/* =================================
-   Hobby
-================================= */
-
-#Hobby section {
-    min-height: 120px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-}
-
 #Hobby section h3 {
     margin: 0 0 8px 0;
     text-decoration: none;
@@ -241,6 +261,16 @@ article section:hover {
 
 #Hobby section p {
     margin: 0;
+}
+
+#Hobby section:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 12px 25px var(--shadow),
+        0 0 15px rgba(132, 160, 198, 0.08);
 }
 
 
@@ -382,23 +412,56 @@ article section:hover {
 /* =================================
    Interest
 ================================= */
+#Interest {
+    width: min(90%, 1000px);
+    margin: 0 auto;
+}
 
 #Interest section {
     width: 100%;
-
-    padding: 12px 30px;
-
     min-height: 45px;
 
-    display: flex;
+    padding: 12px 30px;
+    margin: 0;
 
+    display: flex;
     align-items: center;
+
+    background: var(--card);
+
+    border: none;
+    border-left: 1px solid var(--table_border);
+    border-right: 1px solid var(--table_border);
+    border-bottom: 1px solid var(--table_border);
+
+    border-radius: 0;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
+/* Top of the single block */
+#Interest section:first-of-type {
+
+    border-top: 1px solid var(--table_border);
+}
+
+/* Bottom of the single block */
+#Interest section:last-of-type {
+
+    border-bottom: 1px solid var(--table_border);
+}
+
+/* Hover */
+/* #Interest section:hover {
+    background: var(--button-hover);
+} */
+
+/* Text */
 #Interest section h3 {
     margin: 0;
 }
-
 
 /* =================================
    Text

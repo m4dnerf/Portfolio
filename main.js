@@ -3,12 +3,12 @@
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
 
-darkButton.addEventListener("click", () => {
+darkButton.addEventListener("click", function ()  {
     document.body.classList.remove("light-theme");
     
 });
 
-lightButton.addEventListener("click", () => {
+lightButton.addEventListener("click", function () {
     document.body.classList.add("light-theme");
 });
 
