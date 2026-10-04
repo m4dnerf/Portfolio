@@ -277,7 +277,7 @@ article section:hover {
 .Table_list th {
     padding: 18px 20px;
     text-align: left;
-    
+
 
     color: var(--accent);
     font-size: 1rem;
@@ -304,27 +304,27 @@ article section:hover {
     padding: 20px;
     border-right: 1px solid var(--table_border);
     border-bottom: 1px solid var(--table_border);
-   
-    
+
+
 }
 
 .Table_list th:last-child,
 .Table_list td:last-child {
     border-right: none;
     white-space: nowrap;
-   
+
 }
 
 .Table_list th:first-child,
 .Table_list td:first-child {
-   
+
     white-space: nowrap;
-   
+
 }
 
 .Table_list tbody tr:last-child td {
     border-bottom: none;
-    
+
 }
 
 /* Row hover */
@@ -485,6 +485,7 @@ p {
 
     text-decoration: underline;
 }
+
 /* =================================
    Navigation
 ================================= */
@@ -497,7 +498,11 @@ p {
 
     width: 45px;
     height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    padding: 0;
     background: var(--button);
     color: var(--text);
 
