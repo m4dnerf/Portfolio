@@ -24,7 +24,7 @@ body {
         background-color 0.3s ease,
         color 0.3s ease;
 }
-body.light-theme {
+html.light-theme {
     --background: #dce6f2;
     --header: #b3cbe7;
     --card: #edf3fa;
