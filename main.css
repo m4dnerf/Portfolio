@@ -883,7 +883,7 @@ p {
    Model Gallery
 ================================= */
 
-.model-gallery {
+/* .model-gallery {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -917,8 +917,141 @@ p {
 
     box-shadow:
         0 12px 30px var(--shadow);
+} */
+
+/* =================================
+   Header
+================================= */
+
+.model-header {
+    text-align: center;
+
+    padding: 55px 20px 45px;
+
+    background: var(--header);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow:
+        0 5px 20px var(--shadow);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
+.model-header h1 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.model-header p {
+    margin: 8px 0 0;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+}
+
+
+/* =================================
+   Model Container
+================================= */
+
+.model-container {
+    width: min(90%, 1200px);
+
+    margin: 50px auto 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =================================
+   Model Cards
+================================= */
+
+.model-card {
+    overflow: hidden;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 12px 25px var(--shadow),
+        0 0 15px rgba(132, 160, 198, 0.08);
+}
+
+
+/* =================================
+   Model Images
+================================= */
+
+.model-card img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.model-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   Model Information
+================================= */
+
+.model-card h2 {
+    margin: 18px 20px 5px;
+
+    color: var(--text);
+
+    font-size: 1.3rem;
+}
+
+.model-card p {
+    margin: 0 20px 20px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
 /* =================================
    Responsive Design
 ================================= */
@@ -982,3 +1115,21 @@ p {
     }
 }
 
+@media (max-width: 700px) {
+
+    .model-container {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .model-card img {
+        height: 250px;
+    }
+
+    .model-header {
+        padding: 45px 20px 35px;
+    }
+}
