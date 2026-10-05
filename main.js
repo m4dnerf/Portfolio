@@ -1,4 +1,3 @@
-
 // [Theme Customization]
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
