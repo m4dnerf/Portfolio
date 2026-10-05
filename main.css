@@ -982,22 +982,3 @@ p {
     }
 }
 
-@media (max-width: 700px) {
-    .model-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .model-gallery img {
-        height: 220px;
-    }
-}
-
-@media (max-width: 450px) {
-    .model-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .model-gallery img {
-        height: 250px;
-    }
-}
