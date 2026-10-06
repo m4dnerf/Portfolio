@@ -1110,6 +1110,114 @@ p {
 }
 
 /* =================================
+   Assignments
+================================= */
+
+#Assignment {
+    width: min(90%, 1000px);
+    margin: 0 auto;
+}
+
+#Assignment h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Assignment Grid */
+
+#Assignment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+
+/* Assignment Title */
+
+#Assignment>h2 {
+    grid-column: 1 / -1;
+}
+
+
+/* Assignment Cards */
+
+#Assignment section {
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Card 1 */
+
+#Assignment section:nth-of-type(1) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+}
+
+
+/* Card Text */
+
+#Assignment section h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text);
+
+    text-align: center;
+}
+
+
+/* Hover */
+
+#Assignment section:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 12px 25px var(--shadow),
+        0 0 15px rgba(132, 160, 198, 0.08);
+}
+
+
+/* =================================
+   Mobile
+================================= */
+
+@media (max-width: 600px) {
+
+    #Assignment {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    #Assignment section:nth-of-type(1) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+/* =================================
    Responsive Design
 ================================= */
 
@@ -1152,6 +1260,7 @@ p {
         top: 12px;
         right: 12px;
     }
+
 
 
 }
