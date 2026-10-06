@@ -1,0 +1,651 @@
+/* =========================================================
+   COLOR SECTION
+   =========================================================
+
+   Change these colors to whatever you want.
+
+   --color-background
+   --color-header
+   --color-menu
+   --color-main
+   --color-footer
+   --color-accent
+   --color-text
+   --color-card
+
+   ========================================================= */
+
+:root {
+
+	--color-background: linear-gradient(to bottom,
+			#c57878,
+			#ff845b);
+	;
+	--color-header: #c0392b;
+	--color-menu: #d6d2d2;
+	--color-main: #d6d2d2;
+	--color-footer: #333333;
+	--color-accent: #e67e22;
+	--color-text: #333333;
+	--color-card: #f7f7f7;
+
+}
+
+
+/* =========================================================
+   BASIC RESET
+   ========================================================= */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+	scroll-behavior: smooth;
+
+}
+
+
+body {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	background: var(--color-background);
+
+	color: var(--color-text);
+
+	line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   GRID CONTAINER
+   ========================================================= */
+
+.grid-container {
+
+	width: 95%;
+
+	margin: 20px auto;
+
+	display: grid;
+
+	/*
+        Desktop layout:
+
+        Menu = 20%
+        Main = 55%
+        Images = 25%
+    */
+
+	grid-template-columns: 20% 55% 25%;
+
+	grid-template-areas:
+
+		"header header header"
+
+		"menu main main"
+
+		"menu main main"
+
+		"footer footer footer";
+
+	gap: 15px;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#header {
+
+	grid-area: header;
+
+	min-height: 180px;
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+	text-align: center;
+
+	background-color: var(--color-header);
+
+	border-radius: 15px;
+
+	padding: 30px;
+
+
+
+}
+
+
+.header-content h1 {
+
+	font-size: clamp(2rem, 5vw, 4rem);
+
+	margin-bottom: 10px;
+
+}
+
+.header-content hr {
+	width: min(90vw, 1000px);
+    margin: 10px auto 5px;
+    border-radius: 100%;
+}
+
+
+.header-content p {
+
+	font-size: clamp(1rem, 2vw, 1.4rem);
+
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+#menu {
+
+	grid-area: menu;
+
+	background-color: var(--color-menu);
+
+	border-radius: 15px;
+
+	padding: 25px;
+
+	height: fit-content;
+
+	position: sticky;
+
+	top: 20px;
+
+}
+
+
+#menu h2 {
+
+	margin-bottom: 20px;
+
+	text-align: center;
+
+}
+
+
+#menu ul {
+
+	list-style: none;
+
+}
+
+
+#menu li {
+
+	margin-bottom: 10px;
+	background-color: #c0392b;
+	border-radius: 8px;
+
+
+}
+
+
+#menu a {
+
+	display: block;
+
+	text-decoration: none;
+
+	color: var(--color-text);
+
+	padding: 12px;
+
+	border-radius: 8px;
+
+
+
+	transition: 0.2s;
+
+}
+
+
+#menu a:hover {
+
+	background-color: var(--color-accent);
+	filter: drop-shadow(5px 5px 7px Black);
+	color: white;
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+#main {
+
+	grid-area: main;
+
+	background-color: var(--color-main);
+
+	border-radius: 15px;
+
+	padding: 35px;
+
+}
+
+#main h2 {
+
+	background-color: #c0392b;
+	max-width: 40%;
+	border-radius: 10px;
+	padding-left: 1%;
+	
+	
+
+}
+
+
+#main section {
+
+	margin-bottom: 40px;
+
+}
+
+
+#main h2 {
+
+	font-size: clamp(1.5rem, 3vw, 2.2rem);
+
+	margin-bottom: 15px;
+
+}
+
+
+#main h3 {
+
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+
+	margin: 25px 0 10px;
+
+	color: var(--color-accent);
+
+}
+
+
+/* =========================================================
+   INGREDIENTS
+   ========================================================= */
+
+#ingredients ul {
+
+	padding-left: 25px;
+
+}
+
+
+#ingredients li {
+
+	margin-bottom: 8px;
+
+}
+#ingredients h2 {
+
+	text-decoration: underline;
+	background-color: none;
+
+
+}
+
+
+/* =========================================================
+   INSTRUCTIONS
+   ========================================================= */
+
+#instructions ol {
+
+	padding-left: 30px;
+
+}
+
+
+#instructions li {
+
+	margin-bottom: 15px;
+
+	padding-left: 5px;
+
+}
+
+
+/* =========================================================
+   IMAGE GALLERY
+   ========================================================= */
+
+#gallery {
+
+	margin-top: 20px;
+
+}
+
+
+.image-grid {
+
+	display: grid;
+
+	grid-template-columns: repeat(2, 1fr);
+
+	gap: 15px;
+
+}
+
+
+.image-box {
+
+	width: 100%;
+
+
+	background-color: var(--color-card);
+
+	border-radius: 12px;
+
+	overflow: hidden;
+
+}
+
+
+.image-box img {
+
+	width: 100%;
+
+	height: 100%;
+
+	object-fit: cover;
+
+}
+
+
+/*
+    The 5th image takes the full width
+*/
+
+.image-box:nth-child(5) {
+
+	grid-column: 1 / -1;
+
+	aspect-ratio: 2 / 1;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#footer {
+
+	grid-area: footer;
+
+	background-color: var(--color-footer);
+
+	color: white;
+
+	text-align: center;
+
+	padding: 30px;
+
+	border-radius: 15px;
+
+}
+
+
+#footer a {
+
+	color: white;
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+	.grid-container {
+
+		width: 94%;
+
+		grid-template-columns: 25% 75%;
+
+		grid-template-areas:
+
+			"header header"
+
+			"menu main"
+
+			"footer footer";
+
+	}
+
+
+	#main {
+
+		padding: 25px;
+
+	}
+
+
+	#gallery .image-grid {
+
+		grid-template-columns: repeat(2, 1fr);
+
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Below 768px
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+	.grid-container {
+
+		width: 94%;
+
+		display: grid;
+
+		grid-template-columns: 100%;
+
+		grid-template-areas:
+
+			"header"
+
+			"menu"
+
+			"main"
+
+			"footer";
+
+		gap: 10px;
+
+	}
+
+
+	/* Header */
+
+	#header {
+
+		min-height: 140px;
+
+		padding: 20px;
+
+	}
+
+
+	/* Menu */
+
+	#menu {
+
+		position: static;
+
+		padding: 15px;
+
+	}
+
+
+	#menu ul {
+
+		display: grid;
+
+		grid-template-columns: repeat(2, 1fr);
+
+		gap: 5px;
+
+	}
+
+
+	#menu li {
+
+		margin: 0;
+
+	}
+
+
+	#menu a {
+
+		text-align: center;
+
+		padding: 10px 5px;
+
+	}
+
+
+	/* Main */
+
+	#main {
+
+		padding: 20px;
+
+	}
+
+
+	/* Images */
+
+	.image-grid {
+
+		grid-template-columns: 1fr;
+
+	}
+
+
+	.image-box {
+
+		aspect-ratio: 16 / 9;
+
+	}
+
+
+	.image-box:nth-child(5) {
+
+		grid-column: auto;
+
+		aspect-ratio: 16 / 9;
+
+	}
+
+
+	/* Footer */
+
+	#footer {
+
+		padding: 20px;
+
+	}
+
+}
+
+#horizontal {
+	width: auto;
+}
+
+/* =========================================================
+   SMALL MOBILE
+   Below 480px
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+	.grid-container {
+
+		width: 100%;
+
+		margin: 0;
+
+	}
+
+
+	#header {
+
+		border-radius: 0;
+
+	}
+
+
+	#menu {
+
+		border-radius: 0;
+
+	}
+
+
+	#main {
+
+		border-radius: 0;
+
+		padding: 18px;
+
+	}
+
+
+	#footer {
+
+		border-radius: 0;
+
+	}
+
+
+	#menu ul {
+
+		grid-template-columns: 1fr;
+
+	}
+
+
+	#main h2 {
+
+		font-size: 1.5rem;
+
+	}
+
+
+	#main h3 {
+
+		font-size: 1.2rem;
+
+	}
+
+}
