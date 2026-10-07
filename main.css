@@ -37,7 +37,7 @@ body {
    Theme Variables
 ================================= */
 
-/* Iceberg Dark */
+/* Iceberg Dark[Variants] */
 
 :root {
     --background: #161821;
@@ -57,7 +57,7 @@ body {
 }
 
 
-/* Iceberg Light */
+/* Iceberg Light[Variants] */
 
 body.light-theme {
     --background: #dce6f2;
@@ -222,7 +222,7 @@ article>h2 {
 
 
 /* =================================
-   Hobby
+   Hobby 
 ================================= */
 
 #Hobby section {
@@ -722,7 +722,7 @@ p {
 }
 
 /* =================================
-   Theme Menu
+   Theme Menu[For Toggle between theme]
 ================================= */
 
 .theme-menu {
@@ -771,7 +771,7 @@ p {
 
 
 /* =================================
-   Theme Options
+   Theme Options[Dark and light]
 ================================= */
 
 .theme-options {
@@ -1212,14 +1212,7 @@ p {
     color: var(--accent);
 }
 
-
-/* =================================
-   Responsive Design
-================================= */
-
-/* =========================
-   Mobile devices
-   ========================= */
+/* PC AND TABLET */
 
 @media (max-width: 700px) {
 
@@ -1380,10 +1373,7 @@ p {
 }
 
 
-/* =========================
-   Very small phones
-   iPhone SE / 375px and below
-   ========================= */
+/* For Responsive page(Phone compatibility) */
 
 @media (max-width: 400px) {
 
